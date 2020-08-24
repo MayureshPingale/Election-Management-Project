@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Constituency Information</title>
+		        <script src="chai.js"></script>
+            <script src="chai-http.js"></script>
+         <script>
+            chai.use(chaiHttp);
+        </script>
+
+  		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  		<link rel="stylesheet" type="text/css" href="constituency-information.css">
+  		<link rel="stylesheet" type="text/css" href="Navbar.css">
+	</head>
+	
+	<body>
+		<header>
+			<div class="logo">
+				<a href="#"><img src="JaagoBharat2.png"></img></a>
+			</div>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/Register">Register</a></li>
+				<li><a href="/search">Search Name</a></li>
+				<li><a class="active" href="#">Constituency Info</a></li>
+			<ul>
+		</header>
+
+		<main class="box">
+			<div class=city>
+				<form method="POST" action="/Candidate">
+ 				<div class="form-group">
+  					<h3><label for="sel1">Select City</label></h3>
+  					<select class="form-control input-lg" id="sel1" name="city">
+    					<option value="Pune">Pune</option>
+    					<option value="mumbai">Mumbai</option>
+    					<option value="delhi">Delhi</option>
+    					<option value="chennai">Chennai</option>
+  					</select>
+				</div> 
+
+				<div class="form-group">
+  					<h3><label for="con1">Select Constituency</label></h3>
+  					<select class="form-control input-lg" id="con1" name="consti">
+    					<option value="Katraj">Katraj</option>
+    					<option value="Dhankawadi">Dhankawadi</option>
+    					<option value="Camp">Camp</option>
+    					<option value="NaviPeth">NaviPeth</option>
+  					</select>
+				</div>
+
+				<button type="submit" class="btn btn-primary btn-lg">Submit</button>
+				</form>
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Candidate Information</title>
+  		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  		<link rel="stylesheet" type="text/css" href="Candidate.css">
+      <link rel="stylesheet" type="text/css" href="Navbar.css">
+	</head>
+	
+	<body>
+		<header>
+			<div class="logo">
+				<a href="#"><img src="JaagoBharat2.png"></img></a>
+			</div>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/Register">Register</a></li>
+				<li><a href="/search">Search Name</a></li>
+				<li><a class="active" href="/constituency-information">Constituency Info</a></li>
+			<ul>
+		</header>
+
+		<h3>City:<b> <%= city %></b></h3>
+		<h3>Constituency:<b><%= consti %></b></h3>
+
+		<main class="box">
+			 <div class="row">
+        <% for(var i=0;i< result.length;i++){ %>
+  				<div class="column">
+    					<div class="card">
+    						<img src= "<%= result[i].image %>" alt="Avatar" style="width:100%">
+  							    <h5>Name:</h5><h4><b><%= result[i].name %></b></h4>
+    							<h5>Party:</h5><h4><b><%= result[i].Party %> </b></h4>
+    							<h5>Information:</h5><p> <%= result[i].information %></p>
+    					</div>
+  				</div>
+        <% } %>
+			</div> 	
+		</main>
+	</body>
+</html>

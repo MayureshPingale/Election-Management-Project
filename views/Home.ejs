@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+  		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  		<link rel="stylesheet" type="text/css" href="constituency-information.css">
+  		<link rel="stylesheet" type="text/css" href="Navbar.css">
+  		<link rel="stylesheet" type="text/css" href="home.css">
+	</head>
+	
+	<body>
+		<header>
+			<div class="logo">
+				<a href="#"><img src="JaagoBharat2.png"></img></a>
+			</div>
+			<ul>
+				<li><a class="active"href="#">Home</a></li>
+				<li><a href="/Register">Register</a></li>
+				<li><a href="/search">Search Name</a></li>
+				<li><a href="/constituency-information">Constituency Info</a></li>
+			</ul>
+		</header>
+	</body>
+
+	<div class="box1">
+		 <!-- Tab links -->
+		 <script type="text/javascript">
+		 			 	function openCity(evt, cityName) {
+  				// Declare all variables
+  				var i, tabcontent, tablinks;
+  				// Get all elements with class="tabcontent" and hide them
+  				tabcontent = document.getElementsByClassName("tabcontent");
+  				for (i = 0; i < tabcontent.length; i++) {
+    				tabcontent[i].style.display = "none";
+  				}
+
+  				// Get all elements with class="tablinks" and remove the class "active"
+ 				 tablinks = document.getElementsByClassName("tablinks");
+  				for (i = 0; i < tablinks.length; i++) {
+    				tablinks[i].className = tablinks[i].className.replace(" active", "");
+  				}
+
+  				// Show the current tab, and add an "active" class to the button that opened the tab
+  				document.getElementById(cityName).style.display = "block";
+  				evt.currentTarget.className += " active";
+}
+
+		 </script>
+
+			<div class="tab">
+  				<button class="tablinks" name ="buttonid" onclick="openCity(event, 'Current issue')">Current issue</button>
+  				<button class="tablinks" name="buttinid"onclick="openCity(event, 'Press Release')">Press Release</button>
+ 	 			<button class="tablinks" name="buttonid" onclick="openCity(event, 'Important instruction')">Important instruction</button>
+			</div>
+
+<!-- Tab content -->
+			<div id="Current issue" class="tabcontent">
+				<% for(var i=0;i<3	;i++) { %>
+  				<h2><%= result[i].heading %></h2>
+  				<h4><%= result[i].information %></h4>
+  				<br>
+  				<h6 style="border: 1px solid black"></h6>
+  				<% } %>
+			</div>
+
+			<div id="Press Release" class="tabcontent">
+ 				<% for(var i=1;i<4;i++) { %>
+  				<h2><%= result[i].heading %></h2>
+  				<h4><%= result[i].information %></h4>
+  				<br>
+  				<h6 style="border: 1px solid black"></h6>
+  				<% } %>
+			</div>
+
+			<div id="Important instruction" class="tabcontent">
+ 				<% for(var i=0;i<3;i++) { %>
+  				<h2><%= result[i].heading %></h2>
+  				<h4><%= result[i].information %></h4>
+  				<br>
+  				<h6 style="border: 1px solid black"></h6>
+  				<% } %>
+			</div> 
+	</div>
+
+	<div class="box2">
+		<div class="heading">
+			<p>Announcements</p>
+		</div>
+
+		<ul style="margin-top: 10px;">
+			<li><h3>IEEE Computer Society Candidates for 2019 Election</h3>
+			<br>
+
+			<li><h3>Model Code of Conduct is now in place</h3>
+			<br>
+
+			<li><h3>Coronavirus Random Tests, Medical Body ICMR Data Shows Big Shift </h3>
+			<br>
+		</ul>
+
+	</div>
+
+
+
+</html>

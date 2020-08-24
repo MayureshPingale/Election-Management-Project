@@ -1,0 +1,22 @@
+.box{
+  margin-top:100px;
+  width: 50%;
+  height: 350px;
+  border: 2px solid black;
+  margin-left: 22%;
+}
+
+.city{
+	margin-top: 10px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#con1{
+	margin-top: 10px;
+	margin-right: 10%;
+}
+button{
+	float: left;
+	margin-top: 20px;
+}
