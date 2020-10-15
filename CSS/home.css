@@ -1,0 +1,70 @@
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: rgb(8,146,208);
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  color: white;
+  font-size: 30px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: white;
+  color: black;
+  font-size: 30px;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.box1{
+  border: 0px solid white;
+  float: left;
+  margin-left: 3%;
+  margin-top: 100px;
+  width: 60%;
+  height: 30px;
+}
+
+
+.box2{
+  border: 1px solid black;
+  float: left;
+  margin-left: 3%;
+  margin-top: 100px;
+  width: 30%;
+  height: 400px;
+}
+
+.box2 .heading{
+  display: block;
+  background-color:rgb(8,146,208); 
+  color: white;
+  padding-top: 40px;
+  padding-left: 30px;
+  font-size: 30px;
+  height: 90px;
+}
+p{
+  text-align: left;
+}
